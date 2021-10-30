@@ -48,7 +48,7 @@ const Header = () => {
 
               {/* manage all the orders */}
               {user?.displayName || user?.email ? (
-                <Link className="nav-link" to="manageallorders">
+                <Link className="nav-link" to="/manageallorders">
                   Manage All Orders
                 </Link>
               ) : (
