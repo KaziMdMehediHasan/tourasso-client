@@ -1,0 +1,13 @@
+.customer-detail-form{
+    background-color: lightcoral;
+    width: 40%;
+    padding : 2rem;
+    border-radius: 5px;
+}
+
+.booking-form input{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}

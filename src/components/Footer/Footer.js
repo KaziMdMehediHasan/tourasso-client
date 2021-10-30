@@ -29,6 +29,7 @@ const Footer = () => {
       <div className="container footer-parent ">
         <div className="footer-row p-3">
           <img src={logo} alt="brand" />
+          <b>Tourasso</b>
           <p>Beautiful One Day, Perfect The Next</p>
           <p>
             <span>{phone}</span> 1-677-124-44227

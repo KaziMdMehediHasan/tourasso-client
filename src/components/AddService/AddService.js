@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import "./AddService.css";
 
 const AddService = () => {
   const { register, handleSubmit } = useForm();
@@ -20,28 +21,30 @@ const AddService = () => {
     e.target.reset();
   };
   return (
-    <div>
-      <h1 className="text-center">Add service here</h1>
-      <div className="d-flex justify-content-center align-items-center">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            {...register("location", { required: true })}
-            placeholder="Tour Location"
-          />
-          <br />
-          <input {...register("duration")} placeholder="Tour Length" />
-          <br />
-          <textarea
-            {...register("description")}
-            placeholder="Tour Description"
-          />
-          <br />
-          <input {...register("img_url")} placeholder="Image URL" />
-          <br />
-          <input type="number" {...register("price")} placeholder="Price" />
-          <br />
-          <input type="submit" />
-        </form>
+    <div className="my-5">
+      <h1 className="text-center">Add New Service</h1>
+      <div className="add-service-parent shadow-lg">
+        <div>
+          <form className="add-service-form" onSubmit={handleSubmit(onSubmit)}>
+            <input
+              {...register("location", { required: true })}
+              placeholder="Tour Location"
+            />
+            <hr />
+            <input {...register("duration")} placeholder="Tour Length" />
+            <hr />
+            <textarea
+              {...register("description")}
+              placeholder="Tour Description"
+            />
+            <hr />
+            <input {...register("img_url")} placeholder="Image URL" />
+            <hr />
+            <input type="number" {...register("price")} placeholder="Price" />
+            <hr />
+            <input type="submit" />
+          </form>
+        </div>
       </div>
     </div>
   );

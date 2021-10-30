@@ -46,9 +46,33 @@ const Header = () => {
                 ""
               )}
 
+              {/* manage all the orders */}
+              {user?.displayName || user?.email ? (
+                <Link className="nav-link" to="manageallorders">
+                  Manage All Orders
+                </Link>
+              ) : (
+                ""
+              )}
+
+              {/* end of manage all orders */}
+
+              {/* add services */}
+
+              {user?.displayName || user?.email ? (
+                <Link className="nav-link" to="/addservice">
+                  Add Service
+                </Link>
+              ) : (
+                ""
+              )}
+              {/* end of add services */}
+
               {/* logged in user name */}
               {user?.displayName || user?.email ? (
-                <li className="nav-link">{user?.displayName || user?.email}</li>
+                <li className="nav-link text-success">
+                  {user?.displayName || user?.email}
+                </li>
               ) : (
                 ""
               )}

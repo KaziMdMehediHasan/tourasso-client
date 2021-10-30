@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
+import "./OfferDetails.css";
 
 const OfferDetails = () => {
   const { user } = useAuth();
@@ -40,11 +41,11 @@ const OfferDetails = () => {
   //   send request to the server
 
   return (
-    <div>
+    <div className="p-5">
       <div className="d-flex justify-content-evenly align-items-center ">
-        <div className="customer-detail-form">
+        <div className="customer-detail-form shadow-lg">
           <h1>Book Your Trip</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
             <input {...register("firstName")} placeholder="First Name" />
             <hr />
             <input {...register("lastName")} placeholder="Last Name" />
@@ -61,7 +62,7 @@ const OfferDetails = () => {
           </form>
         </div>
         <div className="offer-detail">
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 shadow-lg">
             <div className="card" style={{ width: "25rem" }}>
               <img src={img_url} className="card-img-top" alt="card-img" />
               <div className="card-body">

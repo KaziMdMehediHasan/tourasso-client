@@ -9,6 +9,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Footer/Footer";
+import ManageOrders from "./components/ManageOrders/ManageOrders";
 
 function App() {
   return (
@@ -31,9 +32,12 @@ function App() {
           <PrivateRoute path="/mytrips">
             <MyTrips></MyTrips>
           </PrivateRoute>
-          <Route path="/addservice">
+          <PrivateRoute path="/manageallorders">
+            <ManageOrders></ManageOrders>
+          </PrivateRoute>
+          <PrivateRoute path="/addservice">
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
         </Switch>
         <Footer></Footer>
       </Router>

@@ -18,28 +18,28 @@ const WhySection = () => {
   return (
     <div className="reason-parent my-5">
       {/* first  */}
-      <div className="reason shadow-lg rounded-3 p-4 bg-primary bg-gradient">
+      <div className="reason shadow-lg rounded-3 p-5 bg-primary bg-gradient">
         <div>{guides}</div>
         <div>
           <h4>2000+ Our worldwide guide</h4>
         </div>
       </div>
       {/* second */}
-      <div className="reason shadow-lg rounded-3 p-4 bg-info bg-gradient">
+      <div className="reason shadow-lg rounded-3 p-5 bg-info bg-gradient">
         <div>{handShake}</div>
         <div>
           <h4>100% trusted travel agency</h4>
         </div>
       </div>
       {/* third */}
-      <div className="reason shadow-lg rounded-3 p-4 bg-danger bg-gradient">
+      <div className="reason shadow-lg rounded-3 p-5 bg-danger bg-gradient">
         <div>{route}</div>
         <div>
           <h4>10+ year of travel experience</h4>
         </div>
       </div>
       {/* fourth */}
-      <div className="reason shadow-lg rounded-3 p-4 bg-secondary bg-gradient">
+      <div className="reason shadow-lg rounded-3 p-5 bg-secondary bg-gradient">
         <div>{happy}</div>
         <div>
           <h4>90% of our traveller happy</h4>
