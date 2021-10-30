@@ -12,20 +12,21 @@ initializeAuthentication();
 const auth = getAuth();
 
 const useFirebase = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
   const googleProvider = new GoogleAuthProvider();
 
   //google login
   const loginWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, googleProvider);
+    // .then((result) => {
+    //   const user = result.user;
+    //   setUser(user);
+    // })
+    // .catch((error) => {
+    //   setError(error.message);
+    // });
   };
 
   //end of google login
@@ -33,12 +34,16 @@ const useFirebase = () => {
   //observe the logged in user
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+      } else {
+        setUser({});
       }
+      setIsLoading(false);
     });
-  });
+    return () => unsubscribe();
+  }, []);
 
   //end of observer
 
@@ -58,6 +63,8 @@ const useFirebase = () => {
     error,
     loginWithGoogle,
     logOut,
+    isLoading,
+    setIsLoading,
   };
 };
 

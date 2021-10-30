@@ -7,6 +7,7 @@ import OfferDetails from "./components/OfferDetails/OfferDetails";
 import MyTrips from "./components/MyTrips/MyTrips";
 import AuthProvider from "./contexts/AuthProvider";
 import Login from "./components/Login/Login";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -23,12 +24,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/offer/:id">
+          <PrivateRoute path="/offer/:id">
             <OfferDetails></OfferDetails>
-          </Route>
-          <Route path="/mytrips">
+          </PrivateRoute>
+          <PrivateRoute path="/mytrips">
             <MyTrips></MyTrips>
-          </Route>
+          </PrivateRoute>
           <Route path="/addservice">
             <AddService></AddService>
           </Route>
