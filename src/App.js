@@ -8,6 +8,7 @@ import MyTrips from "./components/MyTrips/MyTrips";
 import AuthProvider from "./contexts/AuthProvider";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <AddService></AddService>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

@@ -16,7 +16,7 @@ const WhySection = () => {
   const route = <FontAwesomeIcon icon={faRoute} size="5x" />;
   const happy = <FontAwesomeIcon icon={faSmileBeam} size="5x" />;
   return (
-    <div className="reason-parent mt-5">
+    <div className="reason-parent my-5">
       {/* first  */}
       <div className="reason shadow-lg rounded-3 p-4 bg-primary bg-gradient">
         <div>{guides}</div>

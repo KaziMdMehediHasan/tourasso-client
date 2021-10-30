@@ -7,7 +7,7 @@ import "./Header.css";
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         {/* brand logo */}
         <div className="brand">
