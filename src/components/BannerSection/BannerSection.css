@@ -1,0 +1,33 @@
+.banner-title {
+    position: absolute;
+    /* top: 20%; */
+    width: 50%;
+    left: 8%;
+    right: 0;
+    margin: 150px auto;
+    z-index: 99;
+    /* padding: 50px; */
+    font-size: 50px;
+
+    color: white;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(0, 255, 213), rgb(228, 228, 228));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel-item img{
+    height: 650px;
+    object-fit: cover;
+}
+
+.caro-img:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(61, 61, 61, 0.5);
+}
