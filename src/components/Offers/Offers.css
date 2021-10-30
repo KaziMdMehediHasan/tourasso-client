@@ -1,0 +1,22 @@
+.offer-parent{
+    display: flex;
+    justify-content: center;
+}
+.offer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap : 2rem;
+}
+
+/* responsive  codes*/
+
+@media screen and (max-width:688px){
+   .service-container{
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+     
+}

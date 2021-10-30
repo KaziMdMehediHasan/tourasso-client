@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SingleOffer from "../SingleOffer/SingleOffer";
+import "./Offers.css";
 
 const Offers = () => {
   const [offers, setOffers] = useState([]);
@@ -12,10 +13,10 @@ const Offers = () => {
       });
   }, []);
   return (
-    <div>
-      <h1>Total offers : {offers.length}</h1>
-      <div className="container my-5">
-        <div class="row">
+    <div className="mt-5">
+      <h1 className="text-center my-5">Our Most Popular And Best Adventures</h1>
+      <div className="offer-parent">
+        <div class="offer-container">
           {offers.map((offer, index) => (
             <SingleOffer key={offer._id} offer={offer}></SingleOffer>
           ))}

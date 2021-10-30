@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SingleOffer = (props) => {
   const { _id, location, img_url, duration, price } = props.offer;
   return (
-    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div>
       <div className="card" style={{ width: "18rem" }}>
         <img src={img_url} className="card-img-top" alt="card-img" />
         <div className="card-body">
