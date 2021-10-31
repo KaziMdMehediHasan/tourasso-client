@@ -72,7 +72,7 @@ const OfferDetails = () => {
         </div>
         <div className="offer-detail">
           <div class="col-lg-4 col-md-6 col-sm-12 shadow-lg">
-            <div className="card" style={{ width: "22rem" }}>
+            <div className="card" style={{ width: "23rem" }}>
               <img src={img_url} className="card-img-top" alt="card-img" />
               <div className="card-body">
                 <h5 className="card-title">{location}</h5>
