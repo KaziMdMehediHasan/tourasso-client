@@ -11,7 +11,7 @@
 /* responsive  codes*/
 
 @media screen and (max-width:688px){
-   .service-container{
+   .offer-container{
       width: auto;
       display: flex;
       flex-direction: column;

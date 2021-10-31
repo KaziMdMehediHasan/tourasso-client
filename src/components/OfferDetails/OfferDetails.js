@@ -45,7 +45,7 @@ const OfferDetails = () => {
 
   return (
     <div className="p-5">
-      <div className="d-flex justify-content-evenly align-items-center ">
+      <div className="booking-parent-container">
         <div className="customer-detail-form shadow-lg">
           <h1>Book Your Trip</h1>
           <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>

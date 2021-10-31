@@ -1,3 +1,8 @@
+.booking-parent-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .customer-detail-form{
     background-color: lightcoral;
     width: 40%;
@@ -10,4 +15,16 @@
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
+}
+
+@media screen and (max-width:688px){
+.booking-parent-container{
+    display : flex;
+    flex-direction: column-reverse;
+
+}
+.customer-detail-form{
+    margin-top: 15%;
+    width: 120%;
+}
 }

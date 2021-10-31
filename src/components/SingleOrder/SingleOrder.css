@@ -7,3 +7,15 @@
 .single-order p{
     width: 10%;
 }
+
+@media screen and (max-width:688px){
+    .single-order{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.single-order p{
+    width: 100%;
+}
+}

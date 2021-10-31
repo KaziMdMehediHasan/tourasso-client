@@ -31,3 +31,11 @@
   right:0;
   background:rgba(61, 61, 61, 0.5);
 }
+
+@media screen and (max-width:688px){
+  .banner-title{
+    width: 80%;
+    font-size: 3rem;
+    top: 15%;
+  }
+}

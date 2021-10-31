@@ -25,7 +25,7 @@ const Footer = () => {
   const twitter = <FontAwesomeIcon icon={faTwitter} />;
   const snapChat = <FontAwesomeIcon icon={faSnapchat} />;
   return (
-    <div className="bg-dark text-light">
+    <div className="bg-dark text-light footer-father">
       <div className="container footer-parent ">
         <div className="footer-row p-3">
           <img src={logo} alt="brand" />

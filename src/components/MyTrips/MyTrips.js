@@ -21,9 +21,11 @@ const MyTrips = () => {
   }, [trips]);
   return (
     <div className="my-trips-parent">
-      <h1>This is My Trips {trips.length}</h1>
+      <h1 className="text-center p-5">
+        Trips You Booked : <span>{trips.length}</span>
+      </h1>
       <div className="container my-5">
-        <div class="row">
+        <div class="my-trips-container">
           {trips.map((trip, index) => (
             <SingleMyTrip key={trip._id} trip={trip}></SingleMyTrip>
           ))}

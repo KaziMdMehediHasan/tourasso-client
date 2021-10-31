@@ -1,5 +1,6 @@
 .order-manage{
     padding: 0 2rem;
+    margin-bottom: 19%;
 }
 .order-header{
     display: flex;
@@ -8,4 +9,10 @@
 
 .order-header h5{
     width: 10%;
+}
+
+@media screen and (max-width:688px){
+    .order-header{
+        display: none;
+}
 }

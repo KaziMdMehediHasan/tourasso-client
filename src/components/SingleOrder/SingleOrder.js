@@ -25,7 +25,7 @@ const SingleOrder = (props) => {
   //update
   const handleApprove = (status, id) => {
     console.log(status, id);
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://fast-meadow-84110.herokuapp.com/trips/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

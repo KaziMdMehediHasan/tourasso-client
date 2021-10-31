@@ -17,3 +17,10 @@
     border: none;
     border-radius: 5px;
 }
+
+
+@media screen and (max-width:688px){
+    .add-service-parent{
+        width: 100%;
+    }
+}

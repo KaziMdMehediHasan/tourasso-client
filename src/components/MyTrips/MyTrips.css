@@ -1,3 +1,23 @@
 .my-trips-parent{
-    height: 100%;
+    margin-bottom : 20%;
+}
+
+.my-trips-parent span{
+color: lightcoral;
+}
+
+.my-trips-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+
+@media screen and (max-width:688px){
+
+.my-trips-container{
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-gap: 2rem;
+}
 }

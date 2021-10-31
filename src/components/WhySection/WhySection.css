@@ -11,3 +11,14 @@
     justify-content: center;
     align-items: center;
 }
+
+/* responsive  codes*/
+
+@media screen and (max-width:688px){
+
+     .reason-parent{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+}
+}
