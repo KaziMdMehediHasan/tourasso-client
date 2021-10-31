@@ -2,11 +2,11 @@ import React from "react";
 import "./SingleOrder.css";
 
 const SingleOrder = (props) => {
-  const { firstName, lastName, contact, email, _id } = props.order;
+  const { firstName, lastName, contact, email, _id, tour_date, status } =
+    props.order;
 
   const handleDelete = (id) => {
     console.log(id);
-
     // sending request to the server to delete orders
 
     fetch(`https://fast-meadow-84110.herokuapp.com/trips/${id}`, {
@@ -14,18 +14,53 @@ const SingleOrder = (props) => {
       headers: {
         "content-type": "application/json",
       },
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+    alert("Deleted");
+  };
+
+  //update
+  const handleApprove = (status, id) => {
+    console.log(status, id);
+    fetch(`http://localhost:5000/update/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(status),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
   };
   return (
     <div className="single-order my-5 shadow rounded-3 p-2">
-      <p className="text-center w-25">
+      <p className="text-center">
         {firstName} {lastName}
       </p>
-      <p className="text-center w-25">{contact}</p>
-      <p className="text-center w-25">{_id}</p>
-      <p className="text-center w-25">{email}</p>
-      <button onClick={() => handleDelete(_id)} className="btn btn-danger">
+      <p className="text-center">{contact}</p>
+      <p className="text-center">{_id}</p>
+      <p className="text-center">{tour_date}</p>
+      <p className="text-center">{email}</p>
+      <p className="text-center">{status}</p>
+      <button
+        onClick={() => {
+          if (window.confirm("Are you sure you want to delete?")) {
+            handleDelete(_id);
+          }
+        }}
+        className="btn btn-danger"
+      >
         Delete
+      </button>
+      <button
+        onClick={() => handleApprove("approved", _id)}
+        className="btn btn-success"
+      >
+        Approve
       </button>
     </div>
   );

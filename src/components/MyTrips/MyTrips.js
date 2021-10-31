@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import SingleMyTrip from "../SingleMyTrip/SingleMyTrip";
+import "./MyTrips.css";
 
 const MyTrips = () => {
   const [trips, setTrips] = useState([]);
@@ -19,7 +20,7 @@ const MyTrips = () => {
       });
   }, [trips]);
   return (
-    <div>
+    <div className="my-trips-parent">
       <h1>This is My Trips {trips.length}</h1>
       <div className="container my-5">
         <div class="row">

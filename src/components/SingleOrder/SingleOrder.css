@@ -3,3 +3,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.single-order p{
+    width: 10%;
+}

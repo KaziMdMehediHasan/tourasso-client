@@ -1,4 +1,11 @@
+.order-manage{
+    padding: 0 2rem;
+}
 .order-header{
     display: flex;
     justify-content: space-between;
+}
+
+.order-header h5{
+    width: 10%;
 }

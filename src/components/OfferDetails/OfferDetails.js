@@ -15,6 +15,7 @@ const OfferDetails = () => {
   const onSubmit = (data, e) => {
     data.booking = offer;
     data.email = user.email;
+    data.status = "pending";
     console.log(data);
 
     fetch("https://fast-meadow-84110.herokuapp.com/trips", {
@@ -24,6 +25,8 @@ const OfferDetails = () => {
       },
       body: JSON.stringify(data),
     });
+
+    alert("Trip Booked Successfully!");
     e.target.reset();
   };
 
@@ -46,16 +49,22 @@ const OfferDetails = () => {
         <div className="customer-detail-form shadow-lg">
           <h1>Book Your Trip</h1>
           <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("firstName")} placeholder="First Name" />
+            <input
+              {...register("firstName", { required: true })}
+              placeholder="First Name *required"
+            />
             <hr />
-            <input {...register("lastName")} placeholder="Last Name" />
+            <input
+              {...register("lastName", { required: true })}
+              placeholder="Last Name *required"
+            />
             <hr />
-            <input type="date" {...register("tour-date")} />
+            <input type="date" {...register("tour_date")} />
             <hr />
             <input
               type="number"
-              {...register("contact")}
-              placeholder="Your Contact Number"
+              {...register("contact", { required: true })}
+              placeholder="Your Contact Number *required"
             />
             <hr />
             <input type="submit" />

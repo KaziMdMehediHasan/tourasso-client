@@ -1,0 +1,14 @@
+.card-div{
+    position: relative;
+}
+
+.status{
+    height: 25px;
+    position : absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 0 5px;
+    color: lightcoral;
+    border-radius: 5px;
+}
