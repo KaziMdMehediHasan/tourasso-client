@@ -1,6 +1,6 @@
 # Tourasso : A Tour Management and Operating Agency
 
-Live Site is available here [Create React App](https://tourisso.web.app/).
+Live Site is available here [Click](https://tourisso.web.app/).
 
 ## Key Features
 
