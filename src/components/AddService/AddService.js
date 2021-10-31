@@ -28,15 +28,12 @@ const AddService = () => {
           <form className="add-service-form" onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("location", { required: true })}
-              placeholder="Tour Location"
+              placeholder="Location"
             />
             <hr />
             <input {...register("duration")} placeholder="Tour Length" />
             <hr />
-            <textarea
-              {...register("description")}
-              placeholder="Tour Description"
-            />
+            <textarea {...register("description")} placeholder="Description" />
             <hr />
             <input {...register("img_url")} placeholder="Image URL" />
             <hr />
