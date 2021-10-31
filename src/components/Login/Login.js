@@ -1,8 +1,13 @@
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
+import "./Login.css";
 
 const Login = () => {
+  //icon
+  const google = <FontAwesomeIcon icon={faGoogle} size="3x" />;
   const { loginWithGoogle, user, setIsLoading } = useAuth();
   const location = useLocation();
   const history = useHistory();
@@ -24,10 +29,17 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleGoogleLogin} className="btn btn-primary">
-        Login with Google
-      </button>
+    <div className="login-container">
+      <div>
+        <h1>
+          <b>{google}</b>
+        </h1>
+      </div>
+      <div>
+        <button onClick={handleGoogleLogin} className="btn btn-primary">
+          Login with Google
+        </button>
+      </div>
     </div>
   );
 };
