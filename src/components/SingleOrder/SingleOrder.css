@@ -8,6 +8,10 @@
     width: 10%;
 }
 
+.single-order span{
+    display: none;
+}
+
 @media screen and (max-width:688px){
     .single-order{
     display: flex;
@@ -17,5 +21,9 @@
 }
 .single-order p{
     width: 100%;
+}
+.single-order span{
+    display: inline-block;
+    font-weight: bold;
 }
 }

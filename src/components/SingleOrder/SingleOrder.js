@@ -37,12 +37,24 @@ const SingleOrder = (props) => {
   };
   return (
     <div className="single-order my-5 shadow rounded-3 p-2">
-      <p className="text-center">{name}</p>
-      <p className="text-center">{contact}</p>
-      <p className="text-center">{_id}</p>
-      <p className="text-center">{tour_date}</p>
-      <p className="text-center">{email}</p>
-      <p className="text-center">{status}</p>
+      <p className="text-center">
+        <span>Name :</span> {name}
+      </p>
+      <p className="text-center">
+        <span>Contact :</span> {contact}
+      </p>
+      <p className="text-center">
+        <span>Order Id :</span> {_id}
+      </p>
+      <p className="text-center">
+        <span>Date :</span> {tour_date}
+      </p>
+      <p className="text-center">
+        <span>Email :</span> {email}
+      </p>
+      <p className="text-center">
+        <span>Order Status :</span> {status}
+      </p>
       <button
         onClick={() => {
           if (window.confirm("Are you sure you want to delete?")) {
