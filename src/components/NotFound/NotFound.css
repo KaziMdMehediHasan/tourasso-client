@@ -1,0 +1,16 @@
+.not-found{
+    background-image: url("../../images/notfound.jpg");
+    height: 62vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

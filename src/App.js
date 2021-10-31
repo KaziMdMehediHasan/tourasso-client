@@ -10,6 +10,7 @@ import Login from "./components/Login/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Footer/Footer";
 import ManageOrders from "./components/ManageOrders/ManageOrders";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           <PrivateRoute path="/addservice">
             <AddService></AddService>
           </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer></Footer>
       </Router>
