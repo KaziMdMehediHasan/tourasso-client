@@ -2,8 +2,7 @@ import React from "react";
 import "./SingleOrder.css";
 
 const SingleOrder = (props) => {
-  const { firstName, lastName, contact, email, _id, tour_date, status } =
-    props.order;
+  const { name, contact, email, _id, tour_date, status } = props.order;
 
   const handleDelete = (id) => {
     console.log(id);
@@ -38,9 +37,7 @@ const SingleOrder = (props) => {
   };
   return (
     <div className="single-order my-5 shadow rounded-3 p-2">
-      <p className="text-center">
-        {firstName} {lastName}
-      </p>
+      <p className="text-center">{name}</p>
       <p className="text-center">{contact}</p>
       <p className="text-center">{_id}</p>
       <p className="text-center">{tour_date}</p>

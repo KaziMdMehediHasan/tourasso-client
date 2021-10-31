@@ -6,7 +6,13 @@ import "./OfferDetails.css";
 
 const OfferDetails = () => {
   const { user } = useAuth();
-  const { register, handleSubmit } = useForm();
+  const preloadedValues = {
+    name: user.displayName,
+    userMail: user.email,
+  };
+  const { register, handleSubmit } = useForm({
+    defaultValues: preloadedValues,
+  });
 
   const [offer, setOffer] = useState({});
   const { id } = useParams();
@@ -50,13 +56,13 @@ const OfferDetails = () => {
           <h1>Book Your Trip</h1>
           <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
             <input
-              {...register("firstName", { required: true })}
-              placeholder="First Name *required"
+              {...register("name", { required: true })}
+              placeholder="name *required"
             />
             <hr />
             <input
-              {...register("lastName", { required: true })}
-              placeholder="Last Name *required"
+              {...register("userMail", { required: true })}
+              placeholder="userMail*required"
             />
             <hr />
             <input type="date" {...register("tour_date")} />
